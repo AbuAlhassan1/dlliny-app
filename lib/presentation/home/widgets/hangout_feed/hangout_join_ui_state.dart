@@ -1,0 +1,1 @@
+enum HangoutJoinUiState { canJoin, joined }

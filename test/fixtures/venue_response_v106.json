@@ -1,0 +1,617 @@
+{
+  "id" : "a185bdc1-93f0-410b-8060-6232eb8ca199",
+  "handle" : "cafe.shanasheel",
+  "nameAr" : "مقهى الشناشيل",
+  "nameEn" : null,
+  "descriptionAr" : null,
+  "descriptionEn" : null,
+  "category" : null,
+  "latitude" : 0.0,
+  "longitude" : 0.0,
+  "addressAr" : null,
+  "addressEn" : null,
+  "cityId" : null,
+  "cityNameAr" : null,
+  "cityNameEn" : null,
+  "districtId" : null,
+  "districtNameAr" : null,
+  "districtNameEn" : null,
+  "phone" : null,
+  "website" : null,
+  "priceRange" : null,
+  "avgRating" : null,
+  "totalRatings" : null,
+  "followerCount" : null,
+  "verified" : false,
+  "family" : false,
+  "hasShisha" : false,
+  "hasParking" : false,
+  "hasWifi" : false,
+  "hasOutdoor" : false,
+  "hasPrivateRoom" : false,
+  "hours" : [ {
+    "id" : "18eb20f2-fc4b-4f7a-899e-b79a40ecdc5b",
+    "dayOfWeek" : 0,
+    "openTime" : "09:00:00",
+    "closeTime" : "13:00:00",
+    "closed" : false,
+    "ramadan" : false
+  }, {
+    "id" : "02d50f25-5778-4d15-9be5-95c546f47fdb",
+    "dayOfWeek" : 0,
+    "openTime" : "16:00:00",
+    "closeTime" : "02:00:00",
+    "closed" : false,
+    "ramadan" : false
+  }, {
+    "id" : "10c21635-9b8d-45cc-841a-cc6c177eb28b",
+    "dayOfWeek" : 1,
+    "openTime" : "09:00:00",
+    "closeTime" : "02:00:00",
+    "closed" : false,
+    "ramadan" : false
+  }, {
+    "id" : "de494879-82a4-4555-be51-5f354f445f86",
+    "dayOfWeek" : 2,
+    "openTime" : "09:00:00",
+    "closeTime" : "02:00:00",
+    "closed" : false,
+    "ramadan" : false
+  }, {
+    "id" : "133a7cbf-9f90-4857-858c-5c11c5321324",
+    "dayOfWeek" : 3,
+    "openTime" : "09:00:00",
+    "closeTime" : "02:00:00",
+    "closed" : false,
+    "ramadan" : false
+  }, {
+    "id" : "04811350-c9d3-424f-ba6c-97bcc1e80e30",
+    "dayOfWeek" : 4,
+    "openTime" : "09:00:00",
+    "closeTime" : "03:00:00",
+    "closed" : false,
+    "ramadan" : false
+  }, {
+    "id" : "edbb8192-f4e9-4891-ba0c-e0b238cced39",
+    "dayOfWeek" : 5,
+    "openTime" : null,
+    "closeTime" : null,
+    "closed" : true,
+    "ramadan" : false
+  }, {
+    "id" : "859b3f37-38f4-4cc7-a166-dff2bae7338b",
+    "dayOfWeek" : 6,
+    "openTime" : "00:00:00",
+    "closeTime" : "00:00:00",
+    "closed" : false,
+    "ramadan" : false
+  }, {
+    "id" : "34d9abfc-e8a6-4b70-8aa5-79d77df6ba3d",
+    "dayOfWeek" : 0,
+    "openTime" : "20:00:00",
+    "closeTime" : "03:30:00",
+    "closed" : false,
+    "ramadan" : true
+  }, {
+    "id" : "565d0057-e79d-44f0-bb87-54908f4093ec",
+    "dayOfWeek" : 1,
+    "openTime" : "20:00:00",
+    "closeTime" : "03:30:00",
+    "closed" : false,
+    "ramadan" : true
+  }, {
+    "id" : "8f8fca68-ac5f-402c-83d9-10098c41bc55",
+    "dayOfWeek" : 2,
+    "openTime" : "20:00:00",
+    "closeTime" : "03:30:00",
+    "closed" : false,
+    "ramadan" : true
+  }, {
+    "id" : "d9e999db-9506-403b-ac33-59277a79dc1b",
+    "dayOfWeek" : 3,
+    "openTime" : "20:00:00",
+    "closeTime" : "03:30:00",
+    "closed" : false,
+    "ramadan" : true
+  }, {
+    "id" : "12921ab3-e414-4531-9097-e06a3468d8ae",
+    "dayOfWeek" : 4,
+    "openTime" : "20:00:00",
+    "closeTime" : "04:00:00",
+    "closed" : false,
+    "ramadan" : true
+  }, {
+    "id" : "3285f919-185f-490a-9713-d9ada2472204",
+    "dayOfWeek" : 5,
+    "openTime" : "20:00:00",
+    "closeTime" : "04:00:00",
+    "closed" : false,
+    "ramadan" : true
+  }, {
+    "id" : "03e59925-957f-464d-9b9e-5b97ae0d2e13",
+    "dayOfWeek" : 6,
+    "openTime" : "20:00:00",
+    "closeTime" : "03:30:00",
+    "closed" : false,
+    "ramadan" : true
+  } ],
+  "mediaUrls" : [ "https://d1b744kvymcq8d.cloudfront.net/venues/a185bdc1-93f0-410b-8060-6232eb8ca199/gallery/5c1e.webp" ],
+  "logoUrl" : null,
+  "coverUrl" : null,
+  "coverMediaType" : null,
+  "coverThumbnailUrl" : null,
+  "isFollowing" : false,
+  "postsCount" : 0,
+  "hangoutsCount" : 0,
+  "viewerRole" : null,
+  "locations" : [ {
+    "id" : "68d5c7be-7a14-44d7-83cb-9d59dac62764",
+    "venueId" : "a185bdc1-93f0-410b-8060-6232eb8ca199",
+    "labelAr" : "الكرادة",
+    "labelEn" : null,
+    "addressAr" : null,
+    "addressEn" : null,
+    "cityId" : null,
+    "cityNameAr" : null,
+    "districtId" : 1,
+    "districtNameAr" : "الكرادة",
+    "districtNameEn" : "Karrada",
+    "phone" : null,
+    "latitude" : 33.3,
+    "longitude" : 44.42,
+    "isPrimary" : true,
+    "sortOrder" : 0
+  }, {
+    "id" : "600ecfc7-8f00-4743-95d8-15d82dce8c3f",
+    "venueId" : "a185bdc1-93f0-410b-8060-6232eb8ca199",
+    "labelAr" : null,
+    "labelEn" : null,
+    "addressAr" : null,
+    "addressEn" : null,
+    "cityId" : null,
+    "cityNameAr" : null,
+    "districtId" : null,
+    "districtNameAr" : null,
+    "districtNameEn" : null,
+    "phone" : null,
+    "latitude" : 33.31,
+    "longitude" : 44.34,
+    "isPrimary" : false,
+    "sortOrder" : 0
+  } ],
+  "onlineOnly" : false,
+  "openingHours" : {
+    "timezone" : "Asia/Baghdad",
+    "evaluatedAt" : "2026-09-28T21:40:00+03:00",
+    "ramadanWindow" : null,
+    "summary" : {
+      "locationId" : "68d5c7be-7a14-44d7-83cb-9d59dac62764",
+      "hoursSource" : "VENUE",
+      "statusSource" : "VENUE",
+      "operatingStatus" : "OPEN",
+      "reopensOn" : null,
+      "status" : {
+        "state" : "OPEN",
+        "openNow" : true,
+        "closingSoon" : false,
+        "openingSoon" : false,
+        "alwaysOpen" : false,
+        "closesAt" : {
+          "at" : "2026-09-29T02:00:00+03:00",
+          "localTime" : "02:00",
+          "localDate" : "2026-09-29",
+          "dayOfWeek" : 2,
+          "dayOffset" : 1
+        },
+        "opensAt" : null,
+        "nextChangeAt" : "2026-09-29T02:00:00+03:00",
+        "season" : "REGULAR",
+        "reopensOn" : null,
+        "spanOperatingDate" : "2026-09-28",
+        "spanSeason" : "REGULAR"
+      },
+      "today" : {
+        "date" : "2026-09-28",
+        "dayOfWeek" : 1,
+        "season" : "REGULAR",
+        "kind" : "HOURS",
+        "intervals" : [ {
+          "opens" : "09:00",
+          "closes" : "02:00",
+          "overnight" : true
+        } ],
+        "ramadanEveIntervals" : [ ]
+      },
+      "lastNight" : null,
+      "regular" : {
+        "days" : [ {
+          "dayOfWeek" : 0,
+          "kind" : "HOURS",
+          "intervals" : [ {
+            "opens" : "09:00",
+            "closes" : "13:00",
+            "overnight" : false
+          }, {
+            "opens" : "16:00",
+            "closes" : "02:00",
+            "overnight" : true
+          } ]
+        }, {
+          "dayOfWeek" : 1,
+          "kind" : "HOURS",
+          "intervals" : [ {
+            "opens" : "09:00",
+            "closes" : "02:00",
+            "overnight" : true
+          } ]
+        }, {
+          "dayOfWeek" : 2,
+          "kind" : "HOURS",
+          "intervals" : [ {
+            "opens" : "09:00",
+            "closes" : "02:00",
+            "overnight" : true
+          } ]
+        }, {
+          "dayOfWeek" : 3,
+          "kind" : "HOURS",
+          "intervals" : [ {
+            "opens" : "09:00",
+            "closes" : "02:00",
+            "overnight" : true
+          } ]
+        }, {
+          "dayOfWeek" : 4,
+          "kind" : "HOURS",
+          "intervals" : [ {
+            "opens" : "09:00",
+            "closes" : "03:00",
+            "overnight" : true
+          } ]
+        }, {
+          "dayOfWeek" : 5,
+          "kind" : "CLOSED",
+          "intervals" : [ ]
+        }, {
+          "dayOfWeek" : 6,
+          "kind" : "OPEN_24H",
+          "intervals" : [ ]
+        } ]
+      },
+      "ramadan" : {
+        "days" : [ {
+          "dayOfWeek" : 0,
+          "kind" : "HOURS",
+          "intervals" : [ {
+            "opens" : "20:00",
+            "closes" : "03:30",
+            "overnight" : true
+          } ]
+        }, {
+          "dayOfWeek" : 1,
+          "kind" : "HOURS",
+          "intervals" : [ {
+            "opens" : "20:00",
+            "closes" : "03:30",
+            "overnight" : true
+          } ]
+        }, {
+          "dayOfWeek" : 2,
+          "kind" : "HOURS",
+          "intervals" : [ {
+            "opens" : "20:00",
+            "closes" : "03:30",
+            "overnight" : true
+          } ]
+        }, {
+          "dayOfWeek" : 3,
+          "kind" : "HOURS",
+          "intervals" : [ {
+            "opens" : "20:00",
+            "closes" : "03:30",
+            "overnight" : true
+          } ]
+        }, {
+          "dayOfWeek" : 4,
+          "kind" : "HOURS",
+          "intervals" : [ {
+            "opens" : "20:00",
+            "closes" : "04:00",
+            "overnight" : true
+          } ]
+        }, {
+          "dayOfWeek" : 5,
+          "kind" : "HOURS",
+          "intervals" : [ {
+            "opens" : "20:00",
+            "closes" : "04:00",
+            "overnight" : true
+          } ]
+        }, {
+          "dayOfWeek" : 6,
+          "kind" : "HOURS",
+          "intervals" : [ {
+            "opens" : "20:00",
+            "closes" : "03:30",
+            "overnight" : true
+          } ]
+        } ]
+      },
+      "hoursUpdatedAt" : "2026-09-20T10:12:44Z"
+    },
+    "branches" : [ {
+      "locationId" : "68d5c7be-7a14-44d7-83cb-9d59dac62764",
+      "hoursSource" : "VENUE",
+      "statusSource" : "VENUE",
+      "operatingStatus" : "OPEN",
+      "reopensOn" : null,
+      "status" : {
+        "state" : "OPEN",
+        "openNow" : true,
+        "closingSoon" : false,
+        "openingSoon" : false,
+        "alwaysOpen" : false,
+        "closesAt" : {
+          "at" : "2026-09-29T02:00:00+03:00",
+          "localTime" : "02:00",
+          "localDate" : "2026-09-29",
+          "dayOfWeek" : 2,
+          "dayOffset" : 1
+        },
+        "opensAt" : null,
+        "nextChangeAt" : "2026-09-29T02:00:00+03:00",
+        "season" : "REGULAR",
+        "reopensOn" : null,
+        "spanOperatingDate" : "2026-09-28",
+        "spanSeason" : "REGULAR"
+      },
+      "today" : {
+        "date" : "2026-09-28",
+        "dayOfWeek" : 1,
+        "season" : "REGULAR",
+        "kind" : "HOURS",
+        "intervals" : [ {
+          "opens" : "09:00",
+          "closes" : "02:00",
+          "overnight" : true
+        } ],
+        "ramadanEveIntervals" : [ ]
+      },
+      "lastNight" : null,
+      "regular" : {
+        "days" : [ {
+          "dayOfWeek" : 0,
+          "kind" : "HOURS",
+          "intervals" : [ {
+            "opens" : "09:00",
+            "closes" : "13:00",
+            "overnight" : false
+          }, {
+            "opens" : "16:00",
+            "closes" : "02:00",
+            "overnight" : true
+          } ]
+        }, {
+          "dayOfWeek" : 1,
+          "kind" : "HOURS",
+          "intervals" : [ {
+            "opens" : "09:00",
+            "closes" : "02:00",
+            "overnight" : true
+          } ]
+        }, {
+          "dayOfWeek" : 2,
+          "kind" : "HOURS",
+          "intervals" : [ {
+            "opens" : "09:00",
+            "closes" : "02:00",
+            "overnight" : true
+          } ]
+        }, {
+          "dayOfWeek" : 3,
+          "kind" : "HOURS",
+          "intervals" : [ {
+            "opens" : "09:00",
+            "closes" : "02:00",
+            "overnight" : true
+          } ]
+        }, {
+          "dayOfWeek" : 4,
+          "kind" : "HOURS",
+          "intervals" : [ {
+            "opens" : "09:00",
+            "closes" : "03:00",
+            "overnight" : true
+          } ]
+        }, {
+          "dayOfWeek" : 5,
+          "kind" : "CLOSED",
+          "intervals" : [ ]
+        }, {
+          "dayOfWeek" : 6,
+          "kind" : "OPEN_24H",
+          "intervals" : [ ]
+        } ]
+      },
+      "ramadan" : {
+        "days" : [ {
+          "dayOfWeek" : 0,
+          "kind" : "HOURS",
+          "intervals" : [ {
+            "opens" : "20:00",
+            "closes" : "03:30",
+            "overnight" : true
+          } ]
+        }, {
+          "dayOfWeek" : 1,
+          "kind" : "HOURS",
+          "intervals" : [ {
+            "opens" : "20:00",
+            "closes" : "03:30",
+            "overnight" : true
+          } ]
+        }, {
+          "dayOfWeek" : 2,
+          "kind" : "HOURS",
+          "intervals" : [ {
+            "opens" : "20:00",
+            "closes" : "03:30",
+            "overnight" : true
+          } ]
+        }, {
+          "dayOfWeek" : 3,
+          "kind" : "HOURS",
+          "intervals" : [ {
+            "opens" : "20:00",
+            "closes" : "03:30",
+            "overnight" : true
+          } ]
+        }, {
+          "dayOfWeek" : 4,
+          "kind" : "HOURS",
+          "intervals" : [ {
+            "opens" : "20:00",
+            "closes" : "04:00",
+            "overnight" : true
+          } ]
+        }, {
+          "dayOfWeek" : 5,
+          "kind" : "HOURS",
+          "intervals" : [ {
+            "opens" : "20:00",
+            "closes" : "04:00",
+            "overnight" : true
+          } ]
+        }, {
+          "dayOfWeek" : 6,
+          "kind" : "HOURS",
+          "intervals" : [ {
+            "opens" : "20:00",
+            "closes" : "03:30",
+            "overnight" : true
+          } ]
+        } ]
+      },
+      "hoursUpdatedAt" : "2026-09-20T10:12:44Z"
+    }, {
+      "locationId" : "600ecfc7-8f00-4743-95d8-15d82dce8c3f",
+      "hoursSource" : "BRANCH",
+      "statusSource" : "VENUE",
+      "operatingStatus" : "OPEN",
+      "reopensOn" : null,
+      "status" : {
+        "state" : "OPEN",
+        "openNow" : true,
+        "closingSoon" : false,
+        "openingSoon" : false,
+        "alwaysOpen" : false,
+        "closesAt" : {
+          "at" : "2026-09-29T00:00:00+03:00",
+          "localTime" : "00:00",
+          "localDate" : "2026-09-29",
+          "dayOfWeek" : 2,
+          "dayOffset" : 1
+        },
+        "opensAt" : null,
+        "nextChangeAt" : "2026-09-29T00:00:00+03:00",
+        "season" : "REGULAR",
+        "reopensOn" : null,
+        "spanOperatingDate" : "2026-09-28",
+        "spanSeason" : "REGULAR"
+      },
+      "today" : {
+        "date" : "2026-09-28",
+        "dayOfWeek" : 1,
+        "season" : "REGULAR",
+        "kind" : "HOURS",
+        "intervals" : [ {
+          "opens" : "10:00",
+          "closes" : "00:00",
+          "overnight" : true
+        } ],
+        "ramadanEveIntervals" : [ ]
+      },
+      "lastNight" : null,
+      "regular" : {
+        "days" : [ {
+          "dayOfWeek" : 0,
+          "kind" : "HOURS",
+          "intervals" : [ {
+            "opens" : "10:00",
+            "closes" : "00:00",
+            "overnight" : true
+          } ]
+        }, {
+          "dayOfWeek" : 1,
+          "kind" : "HOURS",
+          "intervals" : [ {
+            "opens" : "10:00",
+            "closes" : "00:00",
+            "overnight" : true
+          } ]
+        }, {
+          "dayOfWeek" : 2,
+          "kind" : "HOURS",
+          "intervals" : [ {
+            "opens" : "10:00",
+            "closes" : "00:00",
+            "overnight" : true
+          } ]
+        }, {
+          "dayOfWeek" : 3,
+          "kind" : "HOURS",
+          "intervals" : [ {
+            "opens" : "10:00",
+            "closes" : "00:00",
+            "overnight" : true
+          } ]
+        }, {
+          "dayOfWeek" : 4,
+          "kind" : "HOURS",
+          "intervals" : [ {
+            "opens" : "10:00",
+            "closes" : "00:00",
+            "overnight" : true
+          } ]
+        }, {
+          "dayOfWeek" : 5,
+          "kind" : "HOURS",
+          "intervals" : [ {
+            "opens" : "10:00",
+            "closes" : "00:00",
+            "overnight" : true
+          } ]
+        }, {
+          "dayOfWeek" : 6,
+          "kind" : "HOURS",
+          "intervals" : [ {
+            "opens" : "10:00",
+            "closes" : "00:00",
+            "overnight" : true
+          } ]
+        } ]
+      },
+      "ramadan" : null,
+      "hoursUpdatedAt" : "2026-09-22T08:01:10Z"
+    } ]
+  },
+  "gallery" : {
+    "totalCount" : 1,
+    "photos" : [ {
+      "id" : "e3a130da-9982-4383-88a4-11ba771176c5",
+      "url" : "https://d1b744kvymcq8d.cloudfront.net/venues/a185bdc1-93f0-410b-8060-6232eb8ca199/gallery/5c1e.webp",
+      "width" : 1536,
+      "height" : 2048,
+      "aspectRatio" : 0.75,
+      "placeholderHash" : "3OcRJYB4d3h/iIeHeEh3eIhw+j2w",
+      "tags" : [ "inside", "seating" ],
+      "locationId" : null,
+      "sortOrder" : 0,
+      "createdAt" : "2026-09-27T18:03:11Z"
+    } ],
+    "tagCounts" : {
+      "inside" : 1,
+      "seating" : 1
+    }
+  }
+}

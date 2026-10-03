@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="UCropTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:statusBarColor">#FF111111</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">#FF000000</item>
+        <item name="android:windowOptOutEdgeToEdgeEnforcement">true</item>
+        <!-- Consume the system-bar insets as padding on the activity's
+             root view. On Android 16 the edge-to-edge opt-out above is
+             ignored, so this is what keeps the toolbar out from under the
+             status bar (adds top inset = status-bar height). -->
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+</resources>

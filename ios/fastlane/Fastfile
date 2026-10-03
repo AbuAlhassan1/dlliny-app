@@ -1,0 +1,50 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Push a new beta build to TestFlight"
+  lane :beta do
+    increment_build_number(xcodeproj: "Runner.xcodeproj")
+    # Keeps Pods/ in sync with Podfile.lock at the start of every
+    # archive — `flutter clean` and dependency overrides both leave
+    # the project in a state where Xcode's "Check Pods Manifest.lock"
+    # script phase aborts the build. Running pod install here makes
+    # the lane reliable even after a destructive cleanup.
+    # `use_bundle_exec: false` is critical — the action otherwise sees
+    # the Gemfile and tries `bundle exec pod install`, which fails
+    # because `cocoapods` isn't in the bundle. We rely on the system
+    # `pod` binary (installed via brew / sudo gem install cocoapods).
+    cocoapods(podfile: "Podfile", use_bundle_exec: false)
+    build_app(
+      workspace: "Runner.xcworkspace",
+      scheme: "Runner",
+      xcargs: "-allowProvisioningUpdates",
+      export_method: "app-store",
+      # Pin the distribution profile explicitly. Without this gym
+      # falls back to Apple's "Cloud Signing" which fails when the
+      # signing Apple ID isn't an Admin on the team — our case
+      # under Jamkhana LLC. Update the profile name on the RHS if
+      # you ever rename it in the Apple Developer Console.
+      export_options: {
+        provisioningProfiles: {
+          "com.beestar.dlliny" => "Dlliny App Store"
+        }
+      }
+    )
+    upload_to_testflight
+  end
+end

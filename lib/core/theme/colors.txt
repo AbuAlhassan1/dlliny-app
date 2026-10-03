@@ -1,0 +1,307 @@
+import 'package:flutter/material.dart';
+
+/// Semantic color tokens for the app. Lives on [ThemeData] as a
+/// `ThemeExtension` so widgets can read the same name in both themes
+/// (e.g. `context.c.surface` is `#131313` in dark and `#FAFAFA` in light).
+///
+/// Tokens are derived from the colors actually used across the codebase
+/// today — see the audit that preceded this file. Add new tokens here
+/// rather than reaching for raw `Color(0x...)` literals at the call site,
+/// otherwise the light/dark mapping drifts.
+@immutable
+class AppColors extends ThemeExtension<AppColors> {
+  // ── Legacy static palette ────────────────────────────────────────
+  // These constants are the leftover purple-themed palette from the
+  // previous theme system. They do NOT adapt to light/dark — they
+  // return the same value in both. Kept here so files that haven't
+  // migrated to the token system below still compile. As files get
+  // touched, replace each `AppColors.darkBorder` etc. with the
+  // appropriate `context.c.<token>` and remove the import if needed.
+  //
+  // New code must use the instance tokens below, not these.
+  static const Color neonBlue = Color(0xFF00fbfb);
+  static const Color purple = Color(0xFF4c0283);
+  static const Color lightPurple = Color(0xFFdbb5fe);
+  static const Color onSurfaceDarkPurple = Color(0xFF251F36);
+  static const Color onSurfaceLightPurple = Color(0xFFCDBEF5);
+  static const Color darkPurple = Color(0xFF14121b);
+  static const Color darkBorder = Color(0xFF342952);
+  static const Color lightBorder = Color(0xFFA795DA);
+  static const Color darkerPurple = Color(0xFF0e0e0e);
+  static const Color lightGrey = Color(0xFF767679);
+  static const Color lighterGrey = Color(0xFFefeff0);
+
+  // ── Surfaces (front-to-back layering) ────────────────────────────
+  final Color background;
+  final Color surface;
+  final Color surfaceMuted;
+  final Color surfaceElevated;
+
+  // ── Borders & dividers ───────────────────────────────────────────
+  final Color border;
+  final Color borderStrong;
+  final Color divider;
+
+  // ── Foreground (text + icons on surface) ─────────────────────────
+  final Color onSurface;
+  final Color onSurfaceSecondary;
+  final Color onSurfaceMuted;
+  final Color onSurfaceDisabled;
+
+  // ── Primary action (e.g. submit pill) ────────────────────────────
+  final Color primary;
+  final Color onPrimary;
+
+  // ── Highlighted "accent card" (hangout card in the feed) ─────────
+  // Deliberately contrasts with the surrounding scaffold — warm beige
+  // on a black page in dark mode, dark slab on a white page in light
+  // mode. The accent-foreground tokens follow the same pattern as
+  // `onSurface*`, just on the inverted background.
+  final Color surfaceAccent;
+  final Color onSurfaceAccent;
+  final Color onSurfaceAccentSecondary;
+  final Color onSurfaceAccentMuted;
+
+  // ── Scrims (over media — same in both themes) ────────────────────
+  final Color scrim;
+  final Color scrimSubtle;
+
+  // ── Accents ──────────────────────────────────────────────────────
+  final Color accent;
+  final Color danger;
+  final Color success;
+  final Color warning;
+
+  // ── Always-dark surfaces (editing UIs — camera, composers) ───────
+  final Color mediaSurface;
+  final Color onMediaSurface;
+
+  const AppColors({
+    required this.background,
+    required this.surface,
+    required this.surfaceMuted,
+    required this.surfaceElevated,
+    required this.border,
+    required this.borderStrong,
+    required this.divider,
+    required this.onSurface,
+    required this.onSurfaceSecondary,
+    required this.onSurfaceMuted,
+    required this.onSurfaceDisabled,
+    required this.primary,
+    required this.onPrimary,
+    required this.surfaceAccent,
+    required this.onSurfaceAccent,
+    required this.onSurfaceAccentSecondary,
+    required this.onSurfaceAccentMuted,
+    required this.scrim,
+    required this.scrimSubtle,
+    required this.accent,
+    required this.danger,
+    required this.success,
+    required this.warning,
+    required this.mediaSurface,
+    required this.onMediaSurface,
+  });
+
+  // ── Concrete palettes ────────────────────────────────────────────
+
+  /// Dark palette — derived from the colors the app currently renders
+  /// (black scaffolds, dark grey surfaces, white text, white pill
+  /// actions).
+  static const AppColors dark = AppColors(
+    // Surfaces
+    background: Color(0xFF000000),
+    surface: Color(0xFF131313),
+    surfaceMuted: Color(0xFF1A1A1A),
+    surfaceElevated: Color(0xFF111111),
+
+    // Borders / dividers
+    border: Color(0x14FFFFFF),
+    borderStrong: Color(0x4DFFFFFF),
+    divider: Colors.white12,
+
+    // Foreground
+    onSurface: Colors.white,
+    onSurfaceSecondary: Colors.white70,
+    onSurfaceMuted: Color(0x7CFFFFFF),
+    onSurfaceDisabled: Colors.white24,
+
+    // Action
+    primary: Colors.white,
+    onPrimary: Colors.black,
+
+    // Accent card — the warm-beige hangout card on the dark feed.
+    // Inverts in light mode (see `light` below) to keep the
+    // "highlighted card" effect against either scaffold.
+    surfaceAccent: Color(0xFFF9F7F2),
+    onSurfaceAccent: Colors.black87,
+    onSurfaceAccentSecondary: Colors.black54,
+    onSurfaceAccentMuted: Color(0x66000000),
+
+    // Scrims
+    scrim: Color(0xCC000000),
+    scrimSubtle: Color(0x66000000),
+
+    // Accents — `red.shade700` / `amber.shade700` aren't const, so the
+    // raw hex from MaterialColor is used directly here.
+    accent: Color(0xFF00FBFB),
+    danger: Colors.red,
+    success: Color(0xFF1DA1F2),
+    warning: Colors.amber,
+
+    // Always-dark — these stay the same in both palettes so the
+    // editing surfaces (camera, photo composer, video composer) keep
+    // their dark identity in light mode too.
+    mediaSurface: Color(0xFF000000),
+    onMediaSurface: Colors.white,
+  );
+
+  /// Light palette — parallel mapping of every dark token.
+  static const AppColors light = AppColors(
+    // Surfaces
+    background: Color(0xFFFFFFFF),
+    surface: Color(0xFFFAFAFA),
+    surfaceMuted: Color(0xFFF2F2F2),
+    surfaceElevated: Color(0xFFFFFFFF),
+
+    // Borders / dividers
+    border: Color(0x14000000),
+    borderStrong: Color(0x4D000000),
+    divider: Colors.black12,
+
+    // Foreground
+    onSurface: Color(0xFF0F0F0F),
+    onSurfaceSecondary: Colors.black54,
+    onSurfaceMuted: Color(0x7C000000),
+    onSurfaceDisabled: Colors.black26,
+
+    // Action
+    primary: Color(0xFF0F0F0F),
+    onPrimary: Colors.white,
+
+    // Accent card — inverted from dark so the hangout card stays
+    // visually distinct against the white scaffold.
+    surfaceAccent: Color(0xFF131313),
+    onSurfaceAccent: Colors.white,
+    onSurfaceAccentSecondary: Colors.white70,
+    onSurfaceAccentMuted: Color(0x66FFFFFF),
+
+    // Scrims — identical to dark; they sit over media which is the
+    // same in both themes.
+    scrim: Color(0xCC000000),
+    scrimSubtle: Color(0x66000000),
+
+    // Accents — slightly desaturated for AA contrast on light bg.
+    accent: Color(0xFF00C2C2),
+    danger: Color(0xFFD32F2F), // Material `red.shade700`
+    success: Color(0xFF1DA1F2),
+    warning: Color(0xFFFFA000), // Material `amber.shade700`
+
+    // Always-dark — same as the dark palette.
+    mediaSurface: Color(0xFF000000),
+    onMediaSurface: Colors.white,
+  );
+
+  @override
+  AppColors copyWith({
+    Color? background,
+    Color? surface,
+    Color? surfaceMuted,
+    Color? surfaceElevated,
+    Color? border,
+    Color? borderStrong,
+    Color? divider,
+    Color? onSurface,
+    Color? onSurfaceSecondary,
+    Color? onSurfaceMuted,
+    Color? onSurfaceDisabled,
+    Color? primary,
+    Color? onPrimary,
+    Color? surfaceAccent,
+    Color? onSurfaceAccent,
+    Color? onSurfaceAccentSecondary,
+    Color? onSurfaceAccentMuted,
+    Color? scrim,
+    Color? scrimSubtle,
+    Color? accent,
+    Color? danger,
+    Color? success,
+    Color? warning,
+    Color? mediaSurface,
+    Color? onMediaSurface,
+  }) {
+    return AppColors(
+      background: background ?? this.background,
+      surface: surface ?? this.surface,
+      surfaceMuted: surfaceMuted ?? this.surfaceMuted,
+      surfaceElevated: surfaceElevated ?? this.surfaceElevated,
+      border: border ?? this.border,
+      borderStrong: borderStrong ?? this.borderStrong,
+      divider: divider ?? this.divider,
+      onSurface: onSurface ?? this.onSurface,
+      onSurfaceSecondary: onSurfaceSecondary ?? this.onSurfaceSecondary,
+      onSurfaceMuted: onSurfaceMuted ?? this.onSurfaceMuted,
+      onSurfaceDisabled: onSurfaceDisabled ?? this.onSurfaceDisabled,
+      primary: primary ?? this.primary,
+      onPrimary: onPrimary ?? this.onPrimary,
+      surfaceAccent: surfaceAccent ?? this.surfaceAccent,
+      onSurfaceAccent: onSurfaceAccent ?? this.onSurfaceAccent,
+      onSurfaceAccentSecondary:
+          onSurfaceAccentSecondary ?? this.onSurfaceAccentSecondary,
+      onSurfaceAccentMuted:
+          onSurfaceAccentMuted ?? this.onSurfaceAccentMuted,
+      scrim: scrim ?? this.scrim,
+      scrimSubtle: scrimSubtle ?? this.scrimSubtle,
+      accent: accent ?? this.accent,
+      danger: danger ?? this.danger,
+      success: success ?? this.success,
+      warning: warning ?? this.warning,
+      mediaSurface: mediaSurface ?? this.mediaSurface,
+      onMediaSurface: onMediaSurface ?? this.onMediaSurface,
+    );
+  }
+
+  @override
+  AppColors lerp(ThemeExtension<AppColors>? other, double t) {
+    if (other is! AppColors) return this;
+    return AppColors(
+      background: Color.lerp(background, other.background, t)!,
+      surface: Color.lerp(surface, other.surface, t)!,
+      surfaceMuted: Color.lerp(surfaceMuted, other.surfaceMuted, t)!,
+      surfaceElevated: Color.lerp(surfaceElevated, other.surfaceElevated, t)!,
+      border: Color.lerp(border, other.border, t)!,
+      borderStrong: Color.lerp(borderStrong, other.borderStrong, t)!,
+      divider: Color.lerp(divider, other.divider, t)!,
+      onSurface: Color.lerp(onSurface, other.onSurface, t)!,
+      onSurfaceSecondary:
+          Color.lerp(onSurfaceSecondary, other.onSurfaceSecondary, t)!,
+      onSurfaceMuted: Color.lerp(onSurfaceMuted, other.onSurfaceMuted, t)!,
+      onSurfaceDisabled:
+          Color.lerp(onSurfaceDisabled, other.onSurfaceDisabled, t)!,
+      primary: Color.lerp(primary, other.primary, t)!,
+      onPrimary: Color.lerp(onPrimary, other.onPrimary, t)!,
+      surfaceAccent: Color.lerp(surfaceAccent, other.surfaceAccent, t)!,
+      onSurfaceAccent:
+          Color.lerp(onSurfaceAccent, other.onSurfaceAccent, t)!,
+      onSurfaceAccentSecondary: Color.lerp(
+          onSurfaceAccentSecondary, other.onSurfaceAccentSecondary, t)!,
+      onSurfaceAccentMuted:
+          Color.lerp(onSurfaceAccentMuted, other.onSurfaceAccentMuted, t)!,
+      scrim: Color.lerp(scrim, other.scrim, t)!,
+      scrimSubtle: Color.lerp(scrimSubtle, other.scrimSubtle, t)!,
+      accent: Color.lerp(accent, other.accent, t)!,
+      danger: Color.lerp(danger, other.danger, t)!,
+      success: Color.lerp(success, other.success, t)!,
+      warning: Color.lerp(warning, other.warning, t)!,
+      mediaSurface: Color.lerp(mediaSurface, other.mediaSurface, t)!,
+      onMediaSurface: Color.lerp(onMediaSurface, other.onMediaSurface, t)!,
+    );
+  }
+}
+
+/// Ergonomic access at call sites: `context.c.surface` instead of
+/// `Theme.of(context).extension<AppColors>()!.surface`.
+extension AppColorsContext on BuildContext {
+  AppColors get c => Theme.of(this).extension<AppColors>()!;
+}
